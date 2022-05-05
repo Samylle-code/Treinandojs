@@ -84,3 +84,4 @@ class ControlaVolume extends controleSeuRemoto{
 }
 const x = new ControlaVolume();
 x.ligar();
+x.abrirMenu();

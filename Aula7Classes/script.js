@@ -8,7 +8,7 @@ class Lutador {
         this.derrotas = derrotas;
         this.empates = empates;
     }
-    getNome(){
+    get nome(){
         return this.nome;
     }
     getIdade(){
@@ -40,7 +40,7 @@ class Lutador {
     getEmpates(){
         return this.empates;
     }
-    setNome(n){
+    set nome(n){
         this.nome = n; 
     }
 
@@ -91,11 +91,11 @@ class Lutador {
 class Luta extends Lutador {
 
     apresentar(){
-        console.log("nome:", super.getNome(), 'idade:', super.getIdade() , "altura:", super.getAltura() , "peso:", super.getPeso(), "categoria:", super.getCategoria(),
+        console.log("nome:", super.nome(), 'idade:', super.getIdade() , "altura:", super.getAltura() , "peso:", super.getPeso(), "categoria:", super.getCategoria(),
         "vitorias:", super.getVitorias(), "derrotas:", super.getDerrotas(), "empates:", super.getEmpates());
     }
     status(){
-        console.log("o Lutador:", nome, "vitorias:", vitorias, "derrotas:", derrotas, "empates:", empates)
+        console.log("o Lutador:", nome, "vitorias:", vitorias, "derrotas:", derrotas, "empates:", empates);
 
     }
     ganharLuta(){
@@ -109,5 +109,14 @@ class Luta extends Lutador {
     }
 }
 
-let novaluta= new Luta([]);
-novaluta[0] = new Lutador()
+
+console.log("Hello World!");
+let fulano = [];
+fulano[0] = new Lutador("Madruga", 31, 1.75, 78.5, 13, 2, 4);
+fulano[1] = new Lutador("Florinda", 31, 1.65, 68.5, 13, 2, 4);
+fulano[2] = new Lutador("Chaves", 31, 1.75, 68.5, 13, 2, 4);
+fulano[3] = new Lutador("Girafa", 31, 1.85, 68.5, 13, 2, 4);
+fulano[4] = new Lutador("Quico", 31, 1.75, 68.5, 13, 2, 4);
+
+let vamoLutar = new Luta();
+vamoLutar.apresentar(fulano[0]);
